@@ -4,6 +4,9 @@ block content
 	h1= title
 	ul
 		- each todo in todos
-			li #{todo.title} - #{todo.status} (#{todo.assignee})
-				a(href="/users/delete/#{todo._id}") delete
-				a(href="/todos/done/#{todo._id}") done
+			- var klass = todo.status === 'done' ? 'done' : ''
+				li(class=klass)
+					span.title #{todo.title}
+					em ( #{todo.assignee} )
+					a(href="/users/delete/#{todo._id}") delete
+					a(href="/todos/done/#{todo._id}") done

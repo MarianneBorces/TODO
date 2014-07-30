@@ -7,3 +7,6 @@ a {
 	margin: 10px;
   color: #00B7FF;
 }
+li.done span.title{
+	text-decoration: line-through;
+}

@@ -11,6 +11,7 @@ router.get('/delete/:id', function(req, res) {
 		}
 		res.redirect( '/todos' );
 	});
+
 });
 
 module.exports = router;
