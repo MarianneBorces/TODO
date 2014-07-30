@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= title
+	ul
+		- each todo in todos
+			li #{todo.title} - #{todo.status} (#{todo.assignee})
+				a(href="/users/delete/#{todo._id}") delete
+				a(href="/todos/done/#{todo._id}") done
